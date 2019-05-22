@@ -30,7 +30,7 @@ public class EventoController {
 	@RequestMapping(value="/listaEventos")
 	@ResponseBody
 	public ModelAndView listaEventos() {
-		ModelAndView mv = new ModelAndView("listaEventos");
+		ModelAndView mv = new ModelAndView("listarEventos");
 		Iterable<Evento> eventos = getEr().findAll();
 		mv.addObject("eventos", eventos);
 		return mv;
